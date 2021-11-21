@@ -13,7 +13,13 @@ background since it's in PiP mode) + Mobile Video Loop.
 
 ### What This Does
 
-https://user-images.githubusercontent.com/60190294/142751768-887879a1-1c37-45f0-add0-081c1600a7a1.mp4
+https://user-images.githubusercontent.com/60190294/142752006-cff93fc5-ad84-4cb4-a7b5-2ba7277fb93a.mov
+
+Additionally,  with PiPifier, you can watch YouTube videos even when
+your phone is shut off. You'll just need to press the play button
+on shut off. This can save power.
+
+#### What Looper does specifically
 
 I just want to make 2 things:
 
