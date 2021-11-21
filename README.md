@@ -13,6 +13,8 @@ background since it's in PiP mode) + Mobile Video Loop.
 
 ### What This Does
 
+![demo](./media/demo.MP4)
+
 I just want to make 2 things:
 
 1. If there is only one video tag, loop it by adding loop attribute to the video tag
