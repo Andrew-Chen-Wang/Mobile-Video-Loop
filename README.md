@@ -13,7 +13,7 @@ background since it's in PiP mode) + Mobile Video Loop.
 
 ### What This Does
 
-![demo](./media/demo.MP4)
+![demo](./media/demo.mp4)
 
 I just want to make 2 things:
 
