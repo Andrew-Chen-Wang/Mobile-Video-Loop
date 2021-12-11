@@ -276,6 +276,7 @@ function extensionStyle() {
   top: 15px;
   right: 15px;
   cursor: pointer;
+  font-size: 20px;
   color: #000;
 }
 input[type=range] {
@@ -622,4 +623,10 @@ function shadowDomOverlay(videoCacheID) {
     
     updateRanges();
     shadow.append(style, sliderStyle, overlay);
+}
+
+function simpleVideoLoop() {
+    const rawVideoData = grabVideo();
+    if (!rawVideoData) return;
+    rawVideoData[1].loop = !rawVideoData[1].loop;
 }

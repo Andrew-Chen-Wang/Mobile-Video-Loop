@@ -6,7 +6,10 @@
 //
 
 import SafariServices
+import UIKit
 import os.log
+
+public let UserDefaultSuiteName = "group.us.hearye.MobileVideoLoop"
 
 class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
 
@@ -16,8 +19,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
         os_log(.default, "Received message from browser.runtime.sendNativeMessage: %@", message as! CVarArg)
 
         let response = NSExtensionItem()
-        response.userInfo = [ SFExtensionMessageKey: [ "Response to": message ] ]
-
+        response.userInfo = [ SFExtensionMessageKey: [ "simple": UserDefaults(suiteName: UserDefaultSuiteName)!.bool(forKey: "simple loop") ] ]
         context.completeRequest(returningItems: [response], completionHandler: nil)
     }
 

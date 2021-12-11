@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+public let UserDefaultSuiteName = "group.us.hearye.MobileVideoLoop"
+
 @main
 struct MobileVideoLoopApp: App {
     @Environment(\.scenePhase) var scenePhase

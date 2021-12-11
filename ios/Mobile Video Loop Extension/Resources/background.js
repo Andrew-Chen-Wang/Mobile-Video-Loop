@@ -14,11 +14,21 @@ function generateUUID() { // Public Domain/MIT
     });
 }
 
+function onExecuted() {}
+function onError() {}
+
 const videoCacheID = generateUUID();
 
 function executeExtensionCode() {
-    const executing = browser.tabs.executeScript({"code": `shadowDomOverlay('${videoCacheID}')`});
-    executing.then(onExecuted, onError);
+    browser.runtime.sendNativeMessage("Loop Video", {"message": "hi"}).then(function(data) {
+        let code = `shadowDomOverlay('${videoCacheID}')`;
+        console.log(data);
+        if (data.simple) {
+            code = "simpleVideoLoop()";
+        }
+        const executing = browser.tabs.executeScript({"code": code});
+        executing.then(onExecuted, onError);
+    }).catch(err => {console.log("Failed: " + err)});
 }
 
 let hasInjectedOneTime = false;
