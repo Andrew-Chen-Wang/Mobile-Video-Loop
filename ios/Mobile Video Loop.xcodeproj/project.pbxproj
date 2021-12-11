@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C08EDCD22764713200D2E736 /* toast.js in Resources */ = {isa = PBXBuildFile; fileRef = C08EDCD12764713200D2E736 /* toast.js */; };
+		C08EDCD22764713200D2E736 /* one-time.js in Resources */ = {isa = PBXBuildFile; fileRef = C08EDCD12764713200D2E736 /* one-time.js */; };
+		C08EDCD4276479DF00D2E736 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08EDCD3276479DF00D2E736 /* App.swift */; };
 		C0AC90A72749B4140079DF7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC90A62749B4140079DF7A /* AppDelegate.swift */; };
 		C0AC90AB2749B4140079DF7A /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = C0AC90A92749B4140079DF7A /* Main.html */; };
 		C0AC90AD2749B4140079DF7A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C0AC90AC2749B4140079DF7A /* Icon.png */; };
@@ -68,7 +69,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C08EDCD12764713200D2E736 /* toast.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = toast.js; sourceTree = "<group>"; };
+		C08EDCD12764713200D2E736 /* one-time.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "one-time.js"; sourceTree = "<group>"; };
+		C08EDCD3276479DF00D2E736 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		C0AC90A32749B4140079DF7A /* Mobile Video Loop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Video Loop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AC90A62749B4140079DF7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0AC90AA2749B4140079DF7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
@@ -208,7 +210,7 @@
 				C0AC90E02749B4160079DF7A /* images */,
 				C0AC90E22749B4160079DF7A /* manifest.json */,
 				C0AC9101274A0E290079DF7A /* background.js */,
-				C08EDCD12764713200D2E736 /* toast.js */,
+				C08EDCD12764713200D2E736 /* one-time.js */,
 				C0AC9102274A0E290079DF7A /* content.js */,
 			);
 			path = Resources;
@@ -370,7 +372,7 @@
 			files = (
 				C0AC9104274A0E290079DF7A /* content.js in Resources */,
 				C0AC9103274A0E290079DF7A /* background.js in Resources */,
-				C08EDCD22764713200D2E736 /* toast.js in Resources */,
+				C08EDCD22764713200D2E736 /* one-time.js in Resources */,
 				C0AC90E12749B4160079DF7A /* images in Resources */,
 				C0AC90E32749B4160079DF7A /* manifest.json in Resources */,
 				C0AC90DF2749B4160079DF7A /* _locales in Resources */,
