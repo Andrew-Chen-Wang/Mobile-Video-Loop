@@ -13,6 +13,19 @@
     } catch(error) {
         console.log('Isomorphic compatibility is not supported at this time for toast.')
     }
+    
+    setInterval(function() {
+        const url = window.location.href,
+            oldCaches = document.querySelectorAll("[data-hvrhnuacfjkdlhaerluihmna23489='mobile-loop-interval']");
+        for (const c of oldCaches) {
+            const data = JSON.parse(c.textContent);
+            if (data.url == url) continue;
+            for (const values of Object.values(data)) {
+                clearInterval(values.interval);
+            }
+            c.remove();
+        }
+    }, 200);
 })(this, function() {
 
     // We need DOM to be ready
@@ -33,9 +46,23 @@
         }
     };
     var autoincrement = 0;
+    
+    // TODO: figure out how to execute this in background.js instead of init here which requires user action first. We're trying to make sure SPAs function properly as well.
+    function clearSPAIntervals() {
+        // This has the unintended consequence of deleting previous loops if a user navigates back and wanted to keep the loop. As of Dec 11, 2021, this is acceptable by the Author.
+        const oldCaches = document.querySelectorAll("[data-hvrhnuacfjkdlhaerluihmna23489='mobile-loop-interval']");
+        for (const c of oldCaches) {
+            for (const values of Object.values(JSON.parse(c.textContent))) {
+                clearInterval(values.interval);
+            }
+            c.remove();
+        }
+    }
 
     // Initialize library
     function init() {
+        clearSPAIntervals();
+        
         // Toast container (check if it's already here due to SPAs leaking these divs)
         const cooltoastContainerID = "ab0cc83b-9a3f-4fd9-8ecb-387bb0f3c9a2";
         let container = document.getElementById(cooltoastContainerID);
@@ -378,6 +405,16 @@ function grabVideo() {
     }
 }
 
+function createCacheDIV(videoCacheID) {
+    const cache = document.createElement("script");
+    cache.id = videoCacheID;
+    cache.type = "application/json";
+    cache.textContent = `{"url": "${window.location.href}"}`;
+    cache.setAttribute("data-hvrhnuacfjkdlhaerluihmna23489", "mobile-loop-interval");
+    document.body.append(cache);
+    return cache;
+}
+
 /**
  * @typedef {Object} VideoCacheProperties
  * @property {number} intervalMin lower bound of video for looping
@@ -389,12 +426,7 @@ function grabVideo() {
  */
 function getVideoCache(videoCacheID) {
     let cache = document.getElementById(videoCacheID);
-    if (!cache) {
-        cache = document.createElement("script");
-        cache.id = videoCacheID;
-        cache.textContent = "{}";
-        document.body.append(cache);
-    }
+    if (!cache) cache = createCacheDIV(videoCacheID);
     return JSON.parse(cache.textContent);
 }
  
@@ -402,14 +434,8 @@ function getVideoCache(videoCacheID) {
  * @returns {null}
  */
 function setVideoCache(videoCacheID, data) {
-    // FIXME We contribute to a memory leak if someone loops too often in one session of a website that is an SPA since intervals are not cleared
     let cache = document.getElementById(videoCacheID);
-    if (!cache) {
-        cache = document.createElement("script");
-        cache.id = videoCacheID;
-        cache.textContent = "{}";
-        document.body.append(cache);
-    }
+    if (!cache) cache = createCacheDIV(videoCacheID);
     cache.textContent = JSON.stringify(data);
 }
  

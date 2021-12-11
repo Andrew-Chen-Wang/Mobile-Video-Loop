@@ -14,7 +14,6 @@ function generateUUID() { // Public Domain/MIT
     });
 }
 
-// FIXME: the downside of using the DOM for storing is that, for example on YouTube, an SPA, the div elements are transferred from one page to another. Even though there is no collision, there is pollution.
 const videoCacheID = generateUUID();
 
 function executeExtensionCode() {
