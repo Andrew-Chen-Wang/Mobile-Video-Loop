@@ -1,5 +1,5 @@
 (function(root, factory) {
-    // The code in this function is for creating toasts
+    // The code in this function is for creating toasts and has been modified to accomodate for SPA functionalities in browser extensions.
     /// Credit: https://codepen.io/uffou/pen/JNVWVy
     /// Taken December 6, 2021 under MIT License
     try {
@@ -36,10 +36,14 @@
 
     // Initialize library
     function init() {
-        // Toast container
-        var container = document.createElement('div');
-        container.id = 'cooltoast-container';
-        document.body.appendChild(container);
+        // Toast container (check if it's already here due to SPAs leaking these divs)
+        const cooltoastContainerID = "ab0cc83b-9a3f-4fd9-8ecb-387bb0f3c9a2";
+        let container = document.getElementById(cooltoastContainerID);
+        if (!container) {
+            container = document.createElement("div");
+            container.id = cooltoastContainerID;
+            document.body.appendChild(container);
+        }
 
         // @Override
         // Replace create method when DOM has finished loading
@@ -98,10 +102,10 @@
 
 
             function removeToast() {
-                document.getElementById('cooltoast-container').removeChild(toast);
+                document.getElementById(cooltoastContainerID).removeChild(toast);
             }
 
-            document.getElementById('cooltoast-container').appendChild(toast);
+            document.getElementById(cooltoastContainerID).append(toast);
             return toast;
 
         }
@@ -113,7 +117,7 @@
 
 function toastCSS() {
     return `
-#cooltoast-container {
+#ab0cc83b-9a3f-4fd9-8ecb-387bb0f3c9a2 {
   position: fixed;
   top: 0;
   right: 0;
@@ -140,8 +144,8 @@ function toastCSS() {
   animation-fill-mode: forwards;
 }
 
-#cooltoast-container p,
-#cooltoast-container h4 {
+#ab0cc83b-9a3f-4fd9-8ecb-387bb0f3c9a2 p,
+#ab0cc83b-9a3f-4fd9-8ecb-387bb0f3c9a2 h4 {
   margin: 3px 0!important;
 }
 
@@ -374,7 +378,46 @@ function grabVideo() {
     }
 }
 
-function shadowDomOverlay(videoCache, extensionDiv, shadow) {
+/**
+ * @typedef {Object} VideoCacheProperties
+ * @property {number} intervalMin lower bound of video for looping
+ * @property {number} intervalMax upper bound of video for looping
+ * @property {number} interval The actual, created interval to be cleared on "Cancel"
+ */
+/**
+ * @returns {Object.<string,VideoCacheProperties>}
+ */
+function getVideoCache(videoCacheID) {
+    let cache = document.getElementById(videoCacheID);
+    if (!cache) {
+        cache = document.createElement("script");
+        cache.id = videoCacheID;
+        cache.textContent = "{}";
+        document.body.append(cache);
+    }
+    return JSON.parse(cache.textContent);
+}
+ 
+/**
+ * @returns {null}
+ */
+function setVideoCache(videoCacheID, data) {
+    // FIXME We contribute to a memory leak if someone loops too often in one session of a website that is an SPA since intervals are not cleared
+    let cache = document.getElementById(videoCacheID);
+    if (!cache) {
+        cache = document.createElement("script");
+        cache.id = videoCacheID;
+        cache.textContent = "{}";
+        document.body.append(cache);
+    }
+    cache.textContent = JSON.stringify(data);
+}
+ 
+function shadowDomOverlay(videoCacheID) {
+    const extensionDiv = document.createElement("div");
+    document.body.append(extensionDiv);
+    let shadow = extensionDiv.attachShadow({mode: "open"});
+    
     const videoRawData = grabVideo();
     if (!videoRawData) return;
     const [videoIndex, video] = videoRawData,
@@ -406,8 +449,10 @@ function shadowDomOverlay(videoCache, extensionDiv, shadow) {
     input1.type = input2.type = "range";
     input1.step = input2.step = "0.000001";
     input1.min = input2.min = input1.value = "0";
-    input1.max = input2.max = input2.value = video.duration;
-    const cache = videoCache[videoIndex];
+    input1.max = input2.max = video.duration;
+    // We first have to set the max value
+    input2.value = input2.max;
+    const cache = getVideoCache(videoCacheID)[videoIndex];
     if (cache) {
         input1.value = cache.intervalMin.toString();
         input2.value = cache.intervalMax.toString();
@@ -435,8 +480,6 @@ function shadowDomOverlay(videoCache, extensionDiv, shadow) {
         endText.textContent = "End Timestamp: " + formatSecondsToPlayback(input2.value);
         startSetInput.value = input1.value;
         endSetInput.value = input2.value;
-        console.log(endSetInput.value);
-        console.log(input2.value);
     }
 
     const MAX_STEP = 0.25;
@@ -495,7 +538,8 @@ function shadowDomOverlay(videoCache, extensionDiv, shadow) {
     okButton.addEventListener("click", function() {
         const minTime = parseFloat(input1.value),
             maxTime = parseFloat(input2.value),
-            cache = videoCache[videoIndex],
+            fullCache = getVideoCache(videoCacheID),
+            cache = fullCache[videoIndex],
             handler = function() {
                 if (maxTime <= video.currentTime) {
                     video.currentTime = minTime;
@@ -508,21 +552,25 @@ function shadowDomOverlay(videoCache, extensionDiv, shadow) {
             clearInterval(cache.interval);
             cache.interval = setInterval(handler, 50);
         } else {
-            videoCache[videoIndex] = {
+            fullCache[videoIndex] = {
                 intervalMin: minTime,
                 intervalMax: maxTime,
                 interval: setInterval(handler, 50)
             };
             handler();
         }
+        setVideoCache(videoCacheID, fullCache);
         closeOverlay();
     });
 
-    cancelButton.textContent = "Cancel";
+    cancelButton.textContent = "Cancel Loop";
     cancelButton.addEventListener("click", function() {
-        if (videoCache[videoIndex]) {
-            clearInterval(videoCache[videoIndex].interval);
-            delete videoCache[videoIndex];
+        let fullCache = getVideoCache(videoCacheID),
+            cache_ = fullCache[videoIndex];
+        if (cache_) {
+            clearInterval(cache_.interval);
+            delete fullCache[videoIndex];
+            setVideoCache(videoCacheID, fullCache);
         }
         closeOverlay();
     });
@@ -548,5 +596,4 @@ function shadowDomOverlay(videoCache, extensionDiv, shadow) {
     
     updateRanges();
     shadow.append(style, sliderStyle, overlay);
-    return videoCache;
 }
