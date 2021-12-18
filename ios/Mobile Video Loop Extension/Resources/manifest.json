@@ -13,6 +13,14 @@
         "256": "images/icon-256.png",
         "512": "images/icon-512.png"
     },
+    
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["one-time.js"],
+            "run_at": "document_idle"
+        }
+    ],
 
     "background": {
         "scripts": [ "background.js" ],

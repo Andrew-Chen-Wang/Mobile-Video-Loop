@@ -19,26 +19,15 @@ function onError() {}
 
 const videoCacheID = generateUUID();
 
-function executeExtensionCode() {
-    browser.runtime.sendNativeMessage("Loop Video", {"message": "hi"}).then(function(data) {
-        let code = `shadowDomOverlay('${videoCacheID}');`;
-        if (data.simple) {
-            code = "simpleVideoLoop();";
-        }
-        const executing = browser.tabs.executeScript({"code": code});
-        executing.then(onExecuted, onError);
-    }).catch(err => {console.log("Failed: " + err)});
-}
-
-let hasInjectedOneTime = false;
-
 browser.browserAction.onClicked.addListener(
     function(tab) {
-        if (!hasInjectedOneTime) {
-            hasInjectedOneTime = true;
-            browser.tabs.executeScript({"file": "one-time.js"}).then(executeExtensionCode);
-        } else {
-            executeExtensionCode();
-        }
+        browser.runtime.sendNativeMessage("Loop Video", {"message": "hi"}).then(function(data) {
+            let code = `shadowDomOverlay('${videoCacheID}');`;
+            if (data.simple) {
+                code = "simpleVideoLoop();";
+            }
+            const executing = browser.tabs.executeScript({"code": code});
+            executing.then(onExecuted, onError);
+        }).catch(err => {console.log("Failed: " + err)});
     }
 );
