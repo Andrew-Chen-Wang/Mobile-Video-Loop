@@ -11,7 +11,6 @@
 		C08EDCD4276479DF00D2E736 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08EDCD3276479DF00D2E736 /* App.swift */; };
 		C0AC90A72749B4140079DF7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC90A62749B4140079DF7A /* AppDelegate.swift */; };
 		C0AC90B32749B4140079DF7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC90B22749B4140079DF7A /* ContentView.swift */; };
-		C0AC90B62749B4140079DF7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AC90B42749B4140079DF7A /* LaunchScreen.storyboard */; };
 		C0AC90C52749B4160079DF7A /* Mobile_Video_LoopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC90C42749B4160079DF7A /* Mobile_Video_LoopTests.swift */; };
 		C0AC90CF2749B4160079DF7A /* Mobile_Video_LoopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC90CE2749B4160079DF7A /* Mobile_Video_LoopUITests.swift */; };
 		C0AC90D12749B4160079DF7A /* Mobile_Video_LoopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC90D02749B4160079DF7A /* Mobile_Video_LoopUITestsLaunchTests.swift */; };
@@ -70,7 +69,6 @@
 		C0AC90A32749B4140079DF7A /* Tarda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tarda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AC90A62749B4140079DF7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0AC90B22749B4140079DF7A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		C0AC90B52749B4140079DF7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0AC90BA2749B4160079DF7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0AC90BB2749B4160079DF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0AC90C02749B4160079DF7A /* TardaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TardaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,7 +146,6 @@
 				C08EDCD3276479DF00D2E736 /* App.swift */,
 				C0AC90A62749B4140079DF7A /* AppDelegate.swift */,
 				C0AC90B22749B4140079DF7A /* ContentView.swift */,
-				C0AC90B42749B4140079DF7A /* LaunchScreen.storyboard */,
 				C0AC90BA2749B4160079DF7A /* Assets.xcassets */,
 				C0AC90BB2749B4160079DF7A /* Info.plist */,
 			);
@@ -322,7 +319,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0AC90B62749B4140079DF7A /* LaunchScreen.storyboard in Resources */,
 				C0AC90EF2749B4160079DF7A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,17 +406,6 @@
 			targetProxy = C0AC90D82749B4160079DF7A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		C0AC90B42749B4140079DF7A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C0AC90B52749B4140079DF7A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C0AC90F02749B4160079DF7A /* Debug */ = {
@@ -607,6 +592,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Tarda/Tarda.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -616,8 +602,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Tarda;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -647,6 +632,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Tarda/Tarda.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -656,8 +642,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Tarda;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

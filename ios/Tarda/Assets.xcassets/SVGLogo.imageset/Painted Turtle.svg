@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="500" height="500" viewBox="0 0 500 500" xml:space="preserve">
+<desc>Created with Fabric.js 4.6.0</desc>
+<defs>
+</defs>
+<g transform="matrix(1 0 0 1 250 250)" id="KM_IUbD14YZEuw25axwBm"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(87,41,145); fill-rule: evenodd; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(-200, -201.58)" d="M 93.396 92.368 C 58.35 111.164 32.375 147.301 28.37 182.835 C 26.48 199.609 22.323 213.333 19.133 213.333 C 15.943 213.333 13.333 219.333 13.333 226.667 C 13.333 264.519 184.685 224.117 258.333 168.899 C 282.923 150.463 287.619 126.667 266.667 126.667 C 259.333 126.667 253.333 123.793 253.333 120.281 C 253.333 88.005 138.803 68.017 93.396 92.368 M 286.388 163.691 C 239.576 211.506 120.01 260 48.934 260 C 23.855 260 17.639 276.236 40 283.333 C 48.52 286.037 53.333 293.42 53.333 303.783 C 53.333 320.8 94.931 328.37 110.333 314.155 C 122.27 303.138 227.106 300.054 231.153 310.6 C 233.499 316.715 244.995 320 264.047 320 C 296.266 320 300.203 312.269 286.43 276.045 C 275.554 247.439 305.954 218.662 341.111 224.284 C 374.24 229.582 386.667 219.098 386.667 185.85 C 386.667 126.369 334.265 114.789 286.388 163.691" stroke-linecap="round" />
+</g>
+</svg>
