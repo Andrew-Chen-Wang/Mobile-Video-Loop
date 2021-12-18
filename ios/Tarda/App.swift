@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public let UserDefaultSuiteName = "group.us.hearye.MobileVideoLoop"
+public let UserDefaultSuiteName = "group.us.hearye.Tarda"
 
 @main
 struct MobileVideoLoopApp: App {

@@ -261,12 +261,12 @@ function extensionStyle() {
 #popup {
   max-width: 600px;
   width: 80%;
-  max-height: 300px;
+  max-height: 400px;
   height: 80%;
-  padding: 20px;
+  padding: 20px 20px 0;
   position: relative;
   background: #fff;
-  margin: 20px auto;
+  margin: 0 auto;
   /* Centers popup */
   transform: translateY(-50%);
   top: 50%;
@@ -276,7 +276,7 @@ function extensionStyle() {
   top: 15px;
   right: 15px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 24px;
   color: #000;
 }
 input[type=range] {
@@ -325,8 +325,8 @@ input[type=range]::-webkit-slider-thumb {
 }
 .multi-range {
   position: relative;
-  height: 50px;
-  margin-top: 35px;
+  height: 30px;
+  margin-top: 20px;
   display: block;
   width: 100%;
 }
@@ -343,9 +343,26 @@ input[type=range]::-webkit-slider-thumb {
   z-index: 10;
 }
 
+#popupContentContainer {
+    overflow-y: scroll;
+    height: 82%;
+}
+@media only screen and (max-height: 300px) {
+    #popup {
+        max-height: 240px;
+    }
+    #popupContentContainer {
+        height: 70%;
+    }
+}
+.popupSectionTitle {
+    text-align: center;
+}
+
 .buttons {
     position: relative;
     text-align: center;
+    font-size: 15px;
 }
 .buttons span, p, input[type="number"] {
     display: inline-block;
@@ -356,6 +373,13 @@ input[type=range]::-webkit-slider-thumb {
 .buttons span:hover {
     background-color: rgba(0,122,255,0.3);
     border-radius: 25px;
+}
+@media only screen and (min-width: 568px) {
+    .timestamp-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 .buttons span {
     color: rgb(0,122,255);
@@ -538,6 +562,7 @@ function shadowDomOverlay(videoCacheID) {
     startSetP.ariaRoleDescription = endSetP.ariaRoleDescription = "Set the timestamp in seconds";
     startSetContainer.className = endSetContainer.className =
         startText.className = endText.className = "buttons";
+    startText.style.margin = endText.style.margin = "4px 20px 0 0";
     startSetInput.type = endSetInput.type = "number";
     startSetInput.step = endSetInput.step = "0.001";
     startSetInput.max = endSetInput.max = input1.max;
@@ -550,15 +575,32 @@ function shadowDomOverlay(videoCacheID) {
         input2.value = this.value;
         updateRanges();
     });
-    endSetContainer.style.marginTop = "4px";
     startSetContainer.append(startSetP, startSetInput);
     endSetContainer.append(endSetP, endSetInput);
 
+    const startTimestampContainer = document.createElement("div"), endTimestampContainer = document.createElement("div");
+    startTimestampContainer.className = endTimestampContainer.className = "timestamp-container";
+    startTimestampContainer.append(startText, startSetContainer);
+    endTimestampContainer.append(endText, endSetContainer);
+
     // OK/Cancel/Close Button handling
     /// Destroys the overlay as it's reusable and adjusts based on state
+    /// We need to prevent page behind overlay from scrolling
+    const preventScrollStyle = document.createElement("style");
+    preventScrollStyle.textContent = "html, body {margin: 0; height: 100%; overflow: hidden;}";
+    document.head.append(preventScrollStyle);
     function closeOverlay() {
         extensionDiv.remove();
+        preventScrollStyle.remove()
     }
+    
+    // Clicked on outside of overlay
+    overlay.addEventListener("click", function(ev) {
+        const popupRect = popup.getBoundingClientRect();
+        if (
+            ev.clientX < popupRect.left || ev.clientX > popupRect.right || ev.clientY < popupRect.top || ev.clientY > popupRect.bottom
+        ) closeOverlay();
+    });
 
     buttonsContainer.className = "buttons";
     okButton.textContent = "Save";
@@ -612,13 +654,23 @@ function shadowDomOverlay(videoCacheID) {
 
     buttonsContainer.append(cancelButton, okButton);
     multiRange.append(input1, inputRange, input2);
-    popup.append(
-        closeButton, multiRange,
-        createHR(),
-        startText, startSetContainer,
-        endText, endSetContainer,
-        createHR(), buttonsContainer
+    
+    function createSectionTitle(title) {
+        const t = document.createElement("div"), text = document.createElement("h3");
+        text.innerText = title;
+        t.className = "popupSectionTitle";
+        t.append(text);
+        return t;
+    }
+
+    const contentOverflowContainer = document.createElement("div"), contentContainer = document.createElement("div");
+    contentContainer.style.overflow = "hidden";
+    contentContainer.append(
+        createSectionTitle("Loop Video"), multiRange, startTimestampContainer, endTimestampContainer
     );
+    contentOverflowContainer.append(contentContainer);
+    contentOverflowContainer.id = "popupContentContainer";
+    popup.append(closeButton, contentOverflowContainer, createHR(), buttonsContainer);
     overlay.append(popup);
     
     updateRanges();

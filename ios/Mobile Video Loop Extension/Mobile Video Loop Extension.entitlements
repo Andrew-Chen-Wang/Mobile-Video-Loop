@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.us.hearye.MobileVideoLoop</string>
+		<string>group.us.hearye.Tarda</string>
 	</array>
 </dict>
 </plist>

@@ -9,7 +9,7 @@ import SafariServices
 import UIKit
 import os.log
 
-public let UserDefaultSuiteName = "group.us.hearye.MobileVideoLoop"
+public let UserDefaultSuiteName = "group.us.hearye.Tarda"
 
 class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
 

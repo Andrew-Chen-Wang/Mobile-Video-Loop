@@ -21,10 +21,9 @@ const videoCacheID = generateUUID();
 
 function executeExtensionCode() {
     browser.runtime.sendNativeMessage("Loop Video", {"message": "hi"}).then(function(data) {
-        let code = `shadowDomOverlay('${videoCacheID}')`;
-        console.log(data);
+        let code = `shadowDomOverlay('${videoCacheID}');`;
         if (data.simple) {
-            code = "simpleVideoLoop()";
+            code = "simpleVideoLoop();";
         }
         const executing = browser.tabs.executeScript({"code": code});
         executing.then(onExecuted, onError);

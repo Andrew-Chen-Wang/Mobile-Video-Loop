@@ -10,15 +10,12 @@
 		C08EDCD22764713200D2E736 /* one-time.js in Resources */ = {isa = PBXBuildFile; fileRef = C08EDCD12764713200D2E736 /* one-time.js */; };
 		C08EDCD4276479DF00D2E736 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08EDCD3276479DF00D2E736 /* App.swift */; };
 		C0AC90A72749B4140079DF7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC90A62749B4140079DF7A /* AppDelegate.swift */; };
-		C0AC90AB2749B4140079DF7A /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = C0AC90A92749B4140079DF7A /* Main.html */; };
-		C0AC90AD2749B4140079DF7A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C0AC90AC2749B4140079DF7A /* Icon.png */; };
-		C0AC90AF2749B4140079DF7A /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = C0AC90AE2749B4140079DF7A /* Style.css */; };
 		C0AC90B32749B4140079DF7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC90B22749B4140079DF7A /* ContentView.swift */; };
 		C0AC90B62749B4140079DF7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AC90B42749B4140079DF7A /* LaunchScreen.storyboard */; };
 		C0AC90C52749B4160079DF7A /* Mobile_Video_LoopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC90C42749B4160079DF7A /* Mobile_Video_LoopTests.swift */; };
 		C0AC90CF2749B4160079DF7A /* Mobile_Video_LoopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC90CE2749B4160079DF7A /* Mobile_Video_LoopUITests.swift */; };
 		C0AC90D12749B4160079DF7A /* Mobile_Video_LoopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC90D02749B4160079DF7A /* Mobile_Video_LoopUITestsLaunchTests.swift */; };
-		C0AC90D72749B4160079DF7A /* Mobile Video Loop Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C0AC90D62749B4160079DF7A /* Mobile Video Loop Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C0AC90D72749B4160079DF7A /* Tarda Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C0AC90D62749B4160079DF7A /* Tarda Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C0AC90DC2749B4160079DF7A /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC90DB2749B4160079DF7A /* SafariWebExtensionHandler.swift */; };
 		C0AC90DF2749B4160079DF7A /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = C0AC90DE2749B4160079DF7A /* _locales */; };
 		C0AC90E12749B4160079DF7A /* images in Resources */ = {isa = PBXBuildFile; fileRef = C0AC90E02749B4160079DF7A /* images */; };
@@ -58,7 +55,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				C0AC90D72749B4160079DF7A /* Mobile Video Loop Extension.appex in Embed App Extensions */,
+				C0AC90D72749B4160079DF7A /* Tarda Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,25 +63,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C01C7D352764BBCC00D19D7A /* Mobile Video Loop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mobile Video Loop.entitlements"; sourceTree = "<group>"; };
+		C01C7D352764BBCC00D19D7A /* Tarda.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tarda.entitlements; sourceTree = "<group>"; };
 		C01C7D362764BC3800D19D7A /* Mobile Video Loop Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mobile Video Loop Extension.entitlements"; sourceTree = "<group>"; };
 		C08EDCD12764713200D2E736 /* one-time.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "one-time.js"; sourceTree = "<group>"; };
 		C08EDCD3276479DF00D2E736 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		C0AC90A32749B4140079DF7A /* Mobile Video Loop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Video Loop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0AC90A32749B4140079DF7A /* Tarda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tarda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AC90A62749B4140079DF7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C0AC90AA2749B4140079DF7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
-		C0AC90AC2749B4140079DF7A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		C0AC90AE2749B4140079DF7A /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
 		C0AC90B22749B4140079DF7A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C0AC90B52749B4140079DF7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0AC90BA2749B4160079DF7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0AC90BB2749B4160079DF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C0AC90C02749B4160079DF7A /* Mobile Video LoopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile Video LoopTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0AC90C02749B4160079DF7A /* TardaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TardaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AC90C42749B4160079DF7A /* Mobile_Video_LoopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_Video_LoopTests.swift; sourceTree = "<group>"; };
-		C0AC90CA2749B4160079DF7A /* Mobile Video LoopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile Video LoopUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0AC90CA2749B4160079DF7A /* TardaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TardaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AC90CE2749B4160079DF7A /* Mobile_Video_LoopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_Video_LoopUITests.swift; sourceTree = "<group>"; };
 		C0AC90D02749B4160079DF7A /* Mobile_Video_LoopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_Video_LoopUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C0AC90D62749B4160079DF7A /* Mobile Video Loop Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Mobile Video Loop Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0AC90D62749B4160079DF7A /* Tarda Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tarda Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AC90DB2749B4160079DF7A /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
 		C0AC90DE2749B4160079DF7A /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
 		C0AC90E02749B4160079DF7A /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
@@ -128,7 +122,7 @@
 		C0AC909A2749B4140079DF7A = {
 			isa = PBXGroup;
 			children = (
-				C0AC90A52749B4140079DF7A /* Mobile Video Loop */,
+				C0AC90A52749B4140079DF7A /* Tarda */,
 				C0AC90C32749B4160079DF7A /* Mobile Video LoopTests */,
 				C0AC90CD2749B4160079DF7A /* Mobile Video LoopUITests */,
 				C0AC90DA2749B4160079DF7A /* Mobile Video Loop Extension */,
@@ -139,37 +133,26 @@
 		C0AC90A42749B4140079DF7A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C0AC90A32749B4140079DF7A /* Mobile Video Loop.app */,
-				C0AC90C02749B4160079DF7A /* Mobile Video LoopTests.xctest */,
-				C0AC90CA2749B4160079DF7A /* Mobile Video LoopUITests.xctest */,
-				C0AC90D62749B4160079DF7A /* Mobile Video Loop Extension.appex */,
+				C0AC90A32749B4140079DF7A /* Tarda.app */,
+				C0AC90C02749B4160079DF7A /* TardaTests.xctest */,
+				C0AC90CA2749B4160079DF7A /* TardaUITests.xctest */,
+				C0AC90D62749B4160079DF7A /* Tarda Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C0AC90A52749B4140079DF7A /* Mobile Video Loop */ = {
+		C0AC90A52749B4140079DF7A /* Tarda */ = {
 			isa = PBXGroup;
 			children = (
-				C01C7D352764BBCC00D19D7A /* Mobile Video Loop.entitlements */,
+				C01C7D352764BBCC00D19D7A /* Tarda.entitlements */,
 				C08EDCD3276479DF00D2E736 /* App.swift */,
 				C0AC90A62749B4140079DF7A /* AppDelegate.swift */,
 				C0AC90B22749B4140079DF7A /* ContentView.swift */,
 				C0AC90B42749B4140079DF7A /* LaunchScreen.storyboard */,
 				C0AC90BA2749B4160079DF7A /* Assets.xcassets */,
 				C0AC90BB2749B4160079DF7A /* Info.plist */,
-				C0AC90A82749B4140079DF7A /* Resources */,
 			);
-			path = "Mobile Video Loop";
-			sourceTree = "<group>";
-		};
-		C0AC90A82749B4140079DF7A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C0AC90A92749B4140079DF7A /* Main.html */,
-				C0AC90AC2749B4140079DF7A /* Icon.png */,
-				C0AC90AE2749B4140079DF7A /* Style.css */,
-			);
-			path = Resources;
+			path = Tarda;
 			sourceTree = "<group>";
 		};
 		C0AC90C32749B4160079DF7A /* Mobile Video LoopTests */ = {
@@ -215,9 +198,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C0AC90A22749B4140079DF7A /* Mobile Video Loop */ = {
+		C0AC90A22749B4140079DF7A /* Tarda */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C0AC90F62749B4160079DF7A /* Build configuration list for PBXNativeTarget "Mobile Video Loop" */;
+			buildConfigurationList = C0AC90F62749B4160079DF7A /* Build configuration list for PBXNativeTarget "Tarda" */;
 			buildPhases = (
 				C0AC909F2749B4140079DF7A /* Sources */,
 				C0AC90A02749B4140079DF7A /* Frameworks */,
@@ -229,14 +212,14 @@
 			dependencies = (
 				C0AC90D92749B4160079DF7A /* PBXTargetDependency */,
 			);
-			name = "Mobile Video Loop";
+			name = Tarda;
 			productName = "Mobile Video Loop";
-			productReference = C0AC90A32749B4140079DF7A /* Mobile Video Loop.app */;
+			productReference = C0AC90A32749B4140079DF7A /* Tarda.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C0AC90BF2749B4160079DF7A /* Mobile Video LoopTests */ = {
+		C0AC90BF2749B4160079DF7A /* TardaTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C0AC90F92749B4160079DF7A /* Build configuration list for PBXNativeTarget "Mobile Video LoopTests" */;
+			buildConfigurationList = C0AC90F92749B4160079DF7A /* Build configuration list for PBXNativeTarget "TardaTests" */;
 			buildPhases = (
 				C0AC90BC2749B4160079DF7A /* Sources */,
 				C0AC90BD2749B4160079DF7A /* Frameworks */,
@@ -247,14 +230,14 @@
 			dependencies = (
 				C0AC90C22749B4160079DF7A /* PBXTargetDependency */,
 			);
-			name = "Mobile Video LoopTests";
+			name = TardaTests;
 			productName = "Mobile Video LoopTests";
-			productReference = C0AC90C02749B4160079DF7A /* Mobile Video LoopTests.xctest */;
+			productReference = C0AC90C02749B4160079DF7A /* TardaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C0AC90C92749B4160079DF7A /* Mobile Video LoopUITests */ = {
+		C0AC90C92749B4160079DF7A /* TardaUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C0AC90FC2749B4160079DF7A /* Build configuration list for PBXNativeTarget "Mobile Video LoopUITests" */;
+			buildConfigurationList = C0AC90FC2749B4160079DF7A /* Build configuration list for PBXNativeTarget "TardaUITests" */;
 			buildPhases = (
 				C0AC90C62749B4160079DF7A /* Sources */,
 				C0AC90C72749B4160079DF7A /* Frameworks */,
@@ -265,14 +248,14 @@
 			dependencies = (
 				C0AC90CC2749B4160079DF7A /* PBXTargetDependency */,
 			);
-			name = "Mobile Video LoopUITests";
+			name = TardaUITests;
 			productName = "Mobile Video LoopUITests";
-			productReference = C0AC90CA2749B4160079DF7A /* Mobile Video LoopUITests.xctest */;
+			productReference = C0AC90CA2749B4160079DF7A /* TardaUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		C0AC90D52749B4160079DF7A /* Mobile Video Loop Extension */ = {
+		C0AC90D52749B4160079DF7A /* Tarda Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C0AC90F22749B4160079DF7A /* Build configuration list for PBXNativeTarget "Mobile Video Loop Extension" */;
+			buildConfigurationList = C0AC90F22749B4160079DF7A /* Build configuration list for PBXNativeTarget "Tarda Extension" */;
 			buildPhases = (
 				C0AC90D22749B4160079DF7A /* Sources */,
 				C0AC90D32749B4160079DF7A /* Frameworks */,
@@ -282,9 +265,9 @@
 			);
 			dependencies = (
 			);
-			name = "Mobile Video Loop Extension";
+			name = "Tarda Extension";
 			productName = "Mobile Video Loop Extension";
-			productReference = C0AC90D62749B4160079DF7A /* Mobile Video Loop Extension.appex */;
+			productReference = C0AC90D62749B4160079DF7A /* Tarda Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -313,7 +296,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C0AC909E2749B4140079DF7A /* Build configuration list for PBXProject "Mobile Video Loop" */;
+			buildConfigurationList = C0AC909E2749B4140079DF7A /* Build configuration list for PBXProject "Tarda" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -326,10 +309,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C0AC90A22749B4140079DF7A /* Mobile Video Loop */,
-				C0AC90BF2749B4160079DF7A /* Mobile Video LoopTests */,
-				C0AC90C92749B4160079DF7A /* Mobile Video LoopUITests */,
-				C0AC90D52749B4160079DF7A /* Mobile Video Loop Extension */,
+				C0AC90A22749B4140079DF7A /* Tarda */,
+				C0AC90BF2749B4160079DF7A /* TardaTests */,
+				C0AC90C92749B4160079DF7A /* TardaUITests */,
+				C0AC90D52749B4160079DF7A /* Tarda Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -339,11 +322,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0AC90AD2749B4140079DF7A /* Icon.png in Resources */,
 				C0AC90B62749B4140079DF7A /* LaunchScreen.storyboard in Resources */,
-				C0AC90AB2749B4140079DF7A /* Main.html in Resources */,
 				C0AC90EF2749B4160079DF7A /* Assets.xcassets in Resources */,
-				C0AC90AF2749B4140079DF7A /* Style.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,30 +396,22 @@
 /* Begin PBXTargetDependency section */
 		C0AC90C22749B4160079DF7A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C0AC90A22749B4140079DF7A /* Mobile Video Loop */;
+			target = C0AC90A22749B4140079DF7A /* Tarda */;
 			targetProxy = C0AC90C12749B4160079DF7A /* PBXContainerItemProxy */;
 		};
 		C0AC90CC2749B4160079DF7A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C0AC90A22749B4140079DF7A /* Mobile Video Loop */;
+			target = C0AC90A22749B4140079DF7A /* Tarda */;
 			targetProxy = C0AC90CB2749B4160079DF7A /* PBXContainerItemProxy */;
 		};
 		C0AC90D92749B4160079DF7A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C0AC90D52749B4160079DF7A /* Mobile Video Loop Extension */;
+			target = C0AC90D52749B4160079DF7A /* Tarda Extension */;
 			targetProxy = C0AC90D82749B4160079DF7A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C0AC90A92749B4140079DF7A /* Main.html */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C0AC90AA2749B4140079DF7A /* Base */,
-			);
-			name = Main.html;
-			sourceTree = "<group>";
-		};
 		C0AC90B42749B4140079DF7A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -584,12 +556,12 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hearye.Mobile-Video-Loop.Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = us.hearye.Tarda.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -615,12 +587,12 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hearye.Mobile-Video-Loop.Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = us.hearye.Tarda.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -635,16 +607,18 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Mobile Video Loop/Mobile Video Loop.entitlements";
+				CODE_SIGN_ENTITLEMENTS = Tarda/Tarda.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C6BP3BJF5G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Mobile Video Loop/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = Loopify;
+				INFOPLIST_FILE = Tarda/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Tarda;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -659,7 +633,7 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hearye.Mobile-Video-Loop";
+				PRODUCT_BUNDLE_IDENTIFIER = us.hearye.Tarda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -673,16 +647,18 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Mobile Video Loop/Mobile Video Loop.entitlements";
+				CODE_SIGN_ENTITLEMENTS = Tarda/Tarda.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C6BP3BJF5G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Mobile Video Loop/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = Loopify;
+				INFOPLIST_FILE = Tarda/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Tarda;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -697,7 +673,7 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hearye.Mobile-Video-Loop";
+				PRODUCT_BUNDLE_IDENTIFIER = us.hearye.Tarda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -726,7 +702,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mobile Video Loop.app/Mobile Video Loop";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tarda.app/Tarda";
 			};
 			name = Debug;
 		};
@@ -751,7 +727,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mobile Video Loop.app/Mobile Video Loop";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tarda.app/Tarda";
 			};
 			name = Release;
 		};
@@ -804,7 +780,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C0AC909E2749B4140079DF7A /* Build configuration list for PBXProject "Mobile Video Loop" */ = {
+		C0AC909E2749B4140079DF7A /* Build configuration list for PBXProject "Tarda" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C0AC90F02749B4160079DF7A /* Debug */,
@@ -813,7 +789,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0AC90F22749B4160079DF7A /* Build configuration list for PBXNativeTarget "Mobile Video Loop Extension" */ = {
+		C0AC90F22749B4160079DF7A /* Build configuration list for PBXNativeTarget "Tarda Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C0AC90F32749B4160079DF7A /* Debug */,
@@ -822,7 +798,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0AC90F62749B4160079DF7A /* Build configuration list for PBXNativeTarget "Mobile Video Loop" */ = {
+		C0AC90F62749B4160079DF7A /* Build configuration list for PBXNativeTarget "Tarda" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C0AC90F72749B4160079DF7A /* Debug */,
@@ -831,7 +807,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0AC90F92749B4160079DF7A /* Build configuration list for PBXNativeTarget "Mobile Video LoopTests" */ = {
+		C0AC90F92749B4160079DF7A /* Build configuration list for PBXNativeTarget "TardaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C0AC90FA2749B4160079DF7A /* Debug */,
@@ -840,7 +816,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0AC90FC2749B4160079DF7A /* Build configuration list for PBXNativeTarget "Mobile Video LoopUITests" */ = {
+		C0AC90FC2749B4160079DF7A /* Build configuration list for PBXNativeTarget "TardaUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C0AC90FD2749B4160079DF7A /* Debug */,
