@@ -1,7 +1,7 @@
 <p align="center">
   <img alt="TardaLogo" width="257.5" height="243.5" src="https://user-images.githubusercontent.com/60190294/146651345-a3db86be-cbf5-4400-aeeb-232deeb34352.png" />
 </p>
-<p align="center"><a href="https://apps.apple.com/us/app/tarda/id1601057188">Download the app here</p>
+<p align="center"><a href="https://apps.apple.com/us/app/tarda/id1601057188">Download the app here</a></p>
 <p align="center">Creating product improvements that big tech won't</p>
 <p align="center">Perfect for background music lovers or meme remixers</p>
 <p align="center">
@@ -57,7 +57,7 @@ This repository's code is licensed under Apache 2.0
 
 I could also not have done this without looking at the open-source source
 code for PiPifier; it allowed me to finally get a working extension
-(with an alert(0)) as I've never developed a browser extension before.
+(with an `alert(0)`) as I've never developed a browser extension before.
 It also showed me how to incorporate the PiPifying
 action -- which was necessary to vendor for the future multi-video
 support. Props to [Arno Appenzeller](https://github.com/arnoappenzeller)!
