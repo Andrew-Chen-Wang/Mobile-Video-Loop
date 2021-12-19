@@ -663,9 +663,20 @@ function shadowDomOverlay(videoCacheID) {
         return t;
     }
 
+    const pipDiv = document.createElement("div"), pipBtn = document.createElement("a");
+    pipDiv.style.textAlign = "center";
+    pipBtn.href = "javascript:void(0)";
+    pipBtn.textContent = "Press here to enable PIP (Lets you turn off your phone)";
+    pipBtn.style.fontSize = "larger";
+    pipDiv.addEventListener("click", function() {
+        video.webkitSetPresentationMode("picture-in-picture");
+    });
+    pipDiv.append(pipBtn);
+
     const contentOverflowContainer = document.createElement("div"), contentContainer = document.createElement("div");
     contentContainer.style.overflow = "hidden";
     contentContainer.append(
+        createSectionTitle("Picture in Picture"), pipDiv, createHR(),
         createSectionTitle("Loop Video"), multiRange, startTimestampContainer, endTimestampContainer
     );
     contentOverflowContainer.append(contentContainer);

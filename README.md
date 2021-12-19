@@ -1,6 +1,7 @@
 <p align="center">
   <img alt="TardaLogo" width="257.5" height="243.5" src="https://user-images.githubusercontent.com/60190294/146651345-a3db86be-cbf5-4400-aeeb-232deeb34352.png" />
 </p>
+<p align="center"><a href="https://apps.apple.com/us/app/tarda/id1601057188">Download the app here</p>
 <p align="center">Creating product improvements that big tech won't</p>
 <p align="center">Perfect for background music lovers or meme remixers</p>
 <p align="center">
@@ -17,9 +18,9 @@ Coming soon: images in YouTube and Reddit comments
 Features:
 - [X] Loop video from start to end
 - [X] Loop video from user selected timestamps
-- [ ] Incorporate PiPifier in app
-- [ ] Images in YouTube comments
-- [ ] Images in Reddit comments
+- [X] Incorporate PiPifier in app for multi-video support
+- [ ] Images/GIFs/Other Media in YouTube comments
+- [ ] Images/GIFs/Other Media in Reddit comments (even if implemented, I'll rework to also show past comments' images that aren't in MD format)
 
 <details><summary>Click to View Demo</summary>
 
@@ -50,6 +51,13 @@ such as moderation costs of images in comments.
 
 Perfect for background music lovers or meme remixers.
 
-### License
+### License and Credit
 
 This repository's code is licensed under Apache 2.0
+
+I could also not have done this without looking at the open-source source
+code for PiPifier; it allowed me to finally get a working extension
+(with an alert(0)) as I've never developed a browser extension before.
+It also showed me how to incorporate the PiPifying
+action -- which was necessary to vendor for the future multi-video
+support. Props to [Arno Appenzeller](https://github.com/arnoappenzeller)!

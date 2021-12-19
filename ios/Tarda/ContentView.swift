@@ -31,6 +31,7 @@ struct ContentView: View {
                 Divider()
                 Text("You can turn on Mobile Video Loop’s Safari extension in Settings.")
                 Text("To loop a video or a YouTube video, select \"Aa\" in Safari's URL bar and press on \"Tarda\"")
+                Text("Video tutorial: [Press here](https://youtu.be/7yGWLK9r_Ys)")
                 Text("Created by [Andrew-Chen-Wang](https://github.com/Andrew-Chen-Wang/)")
                 Text("Reach out at acwangpython@gmail.com")
             }.padding(10)
